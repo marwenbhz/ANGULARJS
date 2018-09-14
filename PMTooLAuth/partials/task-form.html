@@ -1,0 +1,83 @@
+<div class="form-group">
+    <label for="TaskName" class="col-sm-2 control-label">Task Title</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="task.TaskName" class="form-control" id="TaskName" placeholder="Task Title Here"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="Description" class="col-sm-2 control-label">Description</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="task.Description" class="form-control" id="Description" placeholder="Task Description"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="Plan" class="col-sm-2 control-label">Plan</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="task.Plan" class="form-control" id="Plan" placeholder="Task Plan"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="Goals" class="col-sm-2 control-label">Goals</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="task.Goals" class="form-control" id="Goals" placeholder="Task Goals"/>
+    </div>
+</div>
+
+<div class="form-group">
+    Note ! Task Start Date must be >= Project Start Date
+        <label for="StartDate" class="col-sm-2 control-label">Task Start Date</label>
+        <div class="col-sm-10">
+        <input type="date" ng-model="task.StartDate" class="form-control" id="StartDate"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="DeadLine" class="col-sm-2 control-label">DeadLine</label>
+    <div class="col-sm-10">
+        <input type="date" ng-model="task.DeadLine" class="form-control" id="DeadLine"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="EstimatedTime" class="col-sm-2 control-label">EstimatedTime</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="task.EstimatedTime" class="form-control" id="EstimatedTime" placeholder="EstimatedTime"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="Complexity" class="col-sm-2 control-label">Complexity</label>
+    <div class="col-sm-10">
+        <input type="number" ng-model="task.Complexity" class="form-control" id="Complexity"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="State" class="col-sm-2 control-label">State</label>
+    <div class="col-sm-10">
+        <input type="number" ng-model="task.State" class="form-control" id="State"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="TeamLeaderCode" class="col-sm-2 control-label">Team Leader</label>
+    <div class="col-sm-10">
+        <input type="number" ng-model="task.TeamLeaderCode" class="form-control" id="TeamLeaderCode"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="ProjectCode" class="col-sm-2 control-label">Project</label>
+    <div class="col-sm-10">
+        <input type="number" ng-model="task.ProjectCode" class="form-control" id="ProjectCode"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" class="btn btn-primary" value="Save task"/>
+    </div>
+</div>

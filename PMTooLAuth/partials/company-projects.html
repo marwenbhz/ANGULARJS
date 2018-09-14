@@ -1,0 +1,55 @@
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Company Project Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+<br>
+
+<a href="#/newProject" class="btn-primary btn-lg nodecoration">Add New Project</a>
+<table class="table projectstable">
+
+    <h3>Company Projects</h3><br>
+
+    <tr>
+        <td><b>Project ID</b></td>
+        <td><b>Project Name</b></td>
+        <td><b>Company</b></td>
+        <td><b>Description</b></td>
+        <td><b>Plan</b></td>
+        <td><b>Goals</b></td>
+        <td><b>Start Date</b></td>
+        <td><b>Dead Line</b></td>
+        <td><b>Estimated Time</b></td>
+         <td><b>Category</b></td>
+        <td><b>Banque</b></td>
+        <td><b>Manage</b></td>
+    </tr>
+
+    <tr ng-repeat="project in companyprojects">
+        <td>{{project.ProjectID}}</td>
+        <td>{{project.ProjectName}}</td>
+        <td><b>{{project.Company}}</b></td>
+        <td>{{project.Description}}</td>
+        <td>{{project.Plan}}</td>
+        <td>{{project.Goals}}</td>
+        <td>{{project.StartDate}}</td>
+        <td>{{project.DeadLine}}</td>
+        <td>{{project.EstimatedTime}}</td>
+        <td>{{project.Category}}</td>
+        <td>{{project.Banque}}</td>
+        <td>
+            <a class="btn btn-success" href="#/viewProject/{{project.ProjectID}}">View</a>
+            <a class="btn btn-danger"  ng-click="deleteProject(project)">Delete</a>
+            <a class="btn btn-primary" href="#/editProject/{{project.ProjectID}}">Edit</a>
+        </td>
+    </tr>
+</table>

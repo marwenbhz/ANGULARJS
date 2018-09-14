@@ -1,0 +1,36 @@
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Bank Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+
+<table class="table banquetable" align="center">
+
+    <tr>
+        <td align="center"><b>Bank ID</b></td>
+        <td align="center"><b>Bank Name</b></td>
+        <td align="center"><b>Bank Description</b></td>
+        <td align="center"><b>Manage</b></td>
+
+    </tr>
+
+    <tr ng-repeat="banque in banques">
+        <td align="center">{{banque.ID}}</td>
+        <td align="center">{{banque.BanqueName}}</td>
+        <td align="center">{{banque.Description}}</td>
+        <td align="center">
+            <a class="btn btn-success" href="#/viewBanque/{{banque.ID}}">View</a>
+            <a class="btn btn-primary" href="#/viewProjectsBank/{{banque.ID}}">View Projects</a>
+
+        </td>
+    </tr>
+</table>

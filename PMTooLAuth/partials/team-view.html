@@ -1,0 +1,34 @@
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Team By ID Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+<br>
+
+<table class="table teamtable">
+    <tr>
+        <td><h3>Details for {{team.TeamName}}</h3></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Team Name</td>
+        <td>{{team.TeamName}}</td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>{{team.TeamDescription}}</td>
+    </tr>
+
+</table>
+<div>
+    <a class="btn btn-primary" href="#/editTeam/{{team.TeamID}}">Edit</a>
+</div>

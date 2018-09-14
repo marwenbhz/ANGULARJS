@@ -1,0 +1,56 @@
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Task Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+
+<a href="#/newTask" class="btn-primary btn-lg nodecoration">Add New Task</a>
+<table class="table tasjstable">
+
+    <tr>
+        <td align="center"><b>Task ID</b></td>
+        <td align="center"><b>Task Name</b></td>
+        <td align="center"><b>Description</b></td>
+        <td align="center"><b>Plan</b></td>
+        <td align="center"><b>Goals</b></td>
+        <td align="center"><b>Start Date</b></td>
+        <td align="center"><b>Dead Line</b></td>
+        <td align="center"><b>Estimated Time</b></td>
+        <td align="center"><b>Complexity</b></td>
+        <td align="center"><b>State</b></td>
+        <td align="center"><b>Team Leader</b></td>
+        <td align="center"><b>Project</b></td>
+        <td align="center"><b>Manage</b></td>
+    </tr>
+
+    <tr ng-repeat="task in tasks">
+        <td align="center">{{task.TaskID}}</td>
+        <td align="center">{{task.TaskName}}</td>
+        <td align="center">{{task.Description}}</td>
+        <td align="center">{{task.Plan}}</td>
+        <td align="center">{{task.Goals}}</td>
+        <td align="center">{{task.StartDate}}</td>
+        <td align="center">{{task.DeadLine}}</td>
+        <td align="center">{{task.EstimatedTime}}</td>
+        <td align="center">{{task.ComplexityString}}</td>
+        <td align="center">{{task.StateString}}</td>
+        <td align="center">{{task.TeamLeader}}</td>
+        <td align="center">{{task.Project}}</td>
+        <td align="center">
+            <a class="btn btn-success" href="#/viewTask/{{task.TaskID}}">View</a>
+            <a class="btn btn-danger"  ng-click="deleteTask(task)">Delete</a>
+            <a class="btn btn-primary" href="#/editTask/{{task.TaskID}}">Edit</a>
+            <a class="btn btn-warning" href="#/viewTaskMembers/{{task.TaskID}}">View Task Members</a>
+        </td>
+    </tr>
+</table>

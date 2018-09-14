@@ -1,0 +1,48 @@
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Company Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+
+
+
+<br>
+<br>
+
+
+
+<table class="table companiestable">
+
+    <tr>
+        <td align="center"><b>Company ID</b></td>
+        <td align="center"><b>Company Name</b></td>
+        <td align="center"><b>Company Address</b></td>
+        <td align="center"><b>Phone Number</b></td>
+        <td align="center"><b>Country</b></td>
+        <td align="center"><b>Manage</b></td>
+
+    </tr>
+
+
+    <tr ng-repeat="company in companies">
+        <td align="center">{{company.CompanyID}}</td>
+        <td align="center">{{company.CompanyName}}</td>
+        <td align="center">{{company.Address}}</td>
+        <td align="center">{{company.PhoneNumber}}</td>
+        <td align="center">{{company.Country}}</td>
+        <td align="center">
+            <a class="btn btn-success" href="#/viewCompany/{{company.CompanyID}}">View</a>
+            <a class="btn btn-primary" href="#/viewProjectsCompany/{{company.CompanyID}}">View Projects</a>
+        </td>
+    </tr>
+</table>

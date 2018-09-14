@@ -1,0 +1,39 @@
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Team Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+
+<a href="#/newTeam" class="btn-primary btn-lg nodecoration">Add New Team</a>
+<table class="table teamtable">
+
+    <tr>
+        <td align="center"><b>Team ID</b></td>
+        <td align="center"><b>Team Name</b></td>
+        <td align="center"><b>Description</b></td>
+        <td align="center"><b>Manage</b></td>
+
+    </tr>
+
+    <tr ng-repeat="team in teams">
+        <td align="center">{{team.TeamID}}</td>
+        <td align="center">{{team.TeamName}}</td>
+        <td align="center">{{team.TeamDescription}}</td>
+        <td align="center">
+            <a class="btn btn-success" href="#/viewTeam/{{team.TeamID}}">View</a>
+            <a class="btn btn-danger"  ng-click="deleteTeam(team)">Delete</a>
+            <a class="btn btn-primary" href="#/editTeam/{{team.TeamID}}">Edit</a>
+            <a class="btn btn-warning" href="#/viewTeamMembers/{{team.TeamID}}">View Team Members</a>
+        </td>
+    </tr>
+</table>

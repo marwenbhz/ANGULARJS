@@ -1,0 +1,58 @@
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Project Task Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+<br>
+<a hef="#/newTask" class="btn-primary btn-lg nodecoration">Add New Task</a>
+<table class="table tasjstable">
+
+    <h3>Tasks</h3><br>
+
+    <tr>
+        <td><b>Task ID</b></td>
+        <td><b>Task Name</b></td>
+        <td><b>Project</b></td>
+        <td><b>Description</b></td>
+        <td><b>Plan</b></td>
+        <td><b>Goals</b></td>
+        <td><b>Start Date</b></td>
+        <td><b>Dead Line</b></td>
+        <td><b>Estimated Time</b></td>
+        <td><b>Complexity</b></td>
+        <td><b>State</b></td>
+        <td><b>Team Leader</b></td>
+        <td><b>Manage</b></td>
+    </tr>
+
+    <tr ng-repeat="task in projecttasks">
+        <td>{{task.TaskID}}</td>
+        <td>{{task.TaskName}}</td>
+        <td><b>{{task.Project}}</b></td>
+        <td>{{task.Description}}</td>
+        <td>{{task.Plan}}</td>
+        <td>{{task.Goals}}</td>
+        <td>{{task.StartDate}}</td>
+        <td>{{task.DeadLine}}</td>
+        <td>{{task.EstimatedTime}}</td>
+        <td>{{task.ComplexityString}}</td>
+        <td>{{task.StateString}}</td>
+        <td>{{task.TeamLeader}}</td>
+
+        <td>
+            <a class="btn btn-success" href="#/viewTask/{{task.TaskID}}}">View</a>
+            <a class="btn btn-danger"  ng-click="deleteTask(task)">Delete</a>
+            <a class="btn btn-primary" href="#/editTask/{{task.TaskID}}}">Edit</a>
+        </td>
+    </tr>
+</table>

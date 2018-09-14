@@ -1,0 +1,44 @@
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Category Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+
+
+
+<br>
+<br>
+
+
+
+<table class="table categoriestable">
+
+    <tr>
+        <td align="center"><b>Category ID</b></td>
+        <td align="center"><b>Category Name</b></td>
+        <td align="center"><b>Category Description</b></td>
+        <td align="center"><b>Manage</b></td>
+
+    </tr>
+
+    <tr ng-repeat="category in categories">
+        <td align="center">{{category.CategoryID}}</td>
+        <td align="center">{{category.CategoryName}}</td>
+        <td align="center">{{category.CategoryDescription}}</td>
+        <td align="center">
+            <a class="btn btn-success" href="#/viewCategory/{{category.CategoryID}}">View</a>
+            <a class="btn btn-primary" href="#/viewProjectsCategory/{{category.CategoryID}}">View Projects</a>
+
+        </td>
+    </tr>
+</table>

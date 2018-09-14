@@ -1,0 +1,49 @@
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Members Task Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+<br>
+
+<table class="table usertable">
+
+    <h3>Task Members</h3><br>
+
+    <tr>
+        <td><b>User ID</b></td>
+        <td><b>Current Task</b></td>
+        <td><b>User Name</b></td>
+        <td><b>Full Name</b></td>
+        <td><b>Bio</b></td>
+        <td><b>UPN</b></td>
+        <td><b>Country</b></td>
+        <td><b>User Type</b></td>
+        <td><b>Team</b></td>
+        <td><b>Manage</b></td>
+
+    </tr>
+
+    <tr ng-repeat="user in taskmembers">
+        <td>{{user.UserID}}</td>
+        <td><b>{{user.TaskName}}</b></td>
+        <td>{{user.Username}}</td>
+        <td>{{user.FullName}}</td>
+        <td>{{user.Bio}}</td>
+        <td>{{user.UPN}}</td>
+        <td>{{user.Country}}</td>
+        <td>{{user.UserType}}</td>
+        <td>{{user.TeamName}}</td>
+        <td>
+            <a class="btn btn-success" href="#/viewUser/{{user.UserID}}">View</a>
+        </td>
+    </tr>
+</table>

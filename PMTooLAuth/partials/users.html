@@ -1,0 +1,48 @@
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">User Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+
+<table class="table usertable">
+
+    <tr>
+        <td align="center"><b>User ID</b></td>
+        <td align="center"><b>User Name</b></td>
+        <td align="center"><b>Full Name</b></td>
+        <td align="center"><b>Bio</b></td>
+        <td align="center"><b>UPN</b></td>
+        <td align="center"><b>Country</b></td>
+        <td align="center"><b>User Type</b></td>
+        <td align="center"><b>Current Task</b></td>
+        <td align="center"><b>Team</b></td>
+        <td align="center"><b>Manage</b></td>
+
+    </tr>
+
+    <tr ng-repeat="user in users">
+        <td align="center">{{user.UserID}}</td>
+        <td align="center">{{user.Username}}</td>
+        <td align="center">{{user.FullName}}</td>
+        <td align="center">{{user.Bio}}</td>
+        <td align="center">{{user.UPN}}</td>
+        <td align="center">{{user.Country}}</td>
+        <td align="center">{{user.UserType}}</td>
+        <td align="center">{{user.TaskName}}</td>
+        <td align="center">{{user.TeamName}}</td>
+        <td align="center">
+            <a class="btn btn-success" href="#/viewUser/{{user.UserID}}">View</a>
+            <a class="btn btn-primary" href="#/attributeTask/{{user.UserID}}">Attribute Task</a>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,56 @@
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Project Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+
+
+
+<a href="#/newProject" class="btn-primary btn-lg nodecoration">Add New Project</a>
+<table class="table projectstable">
+
+    <tr>
+        <td align="center"><b>Project ID</b></td>
+        <td align="center"><b>Project Name</b></td>
+        <td align="center"><b>Description</b></td>
+        <td align="center"><b>Plan</b></td>
+        <td align="center"><b>Goals</b></td>
+        <td align="center"><b>Start Date</b></td>
+        <td align="center"><b>Dead Line</b></td>
+        <td align="center"><b>Estimated Time</b></td>
+        <td align="center"><b>Company</b></td>
+        <td align="center"><b>Category</b></td>
+        <td align="center"><b>Banque</b></td>
+        <td align="center"><b>Manage</b></td>
+    </tr>
+
+    <tr ng-repeat="project in projects">
+        <td align="center">{{project.ProjectID}}</td>
+        <td align="center">{{project.ProjectName}}</td>
+        <td align="center">{{project.Description}}</td>
+        <td align="center">{{project.Plan}}</td>
+        <td align="center">{{project.Goals}}</td>
+        <td align="center">{{project.StartDate}}</td>
+        <td align="center">{{project.DeadLine}}</td>
+        <td align="center">{{project.EstimatedTime}}</td>
+        <td align="center">{{project.Company}}</td>
+        <td align="center">{{project.Category}}</td>
+        <td align="center">{{project.Banque}}</td>
+        <td align="center">
+            <a class="btn btn-success" href="#/viewProject/{{project.ProjectID}}">View</a>
+            <a class="btn btn-danger"  ng-click="deleteProject(project)">Delete</a>
+            <a class="btn btn-primary" href="#/editProject/{{project.ProjectID}}">Edit</a>
+            <a class="btn btn-warning" href="#/viewTasksProject/{{project.ProjectID}}">View Tasks</a>
+        </td>
+    </tr>
+</table>
